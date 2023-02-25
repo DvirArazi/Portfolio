@@ -66,7 +66,7 @@ export default function Home() {
           />
 
           <Item
-            url='http://everybodysjimapp.herokuapp.com'
+            url='https://github.com/DvirArazi/Castlevania-Remake'
             icon='/bat.png'
             iconWidth={28}
             title={"Castlevania Remake"}
