@@ -29,6 +29,7 @@ export default function Home() {
             icon='person_black_24dp.svg'
             iconWidth={30}
             title='Resume'
+            center={true}
           />
 
           <Item
@@ -38,6 +39,7 @@ export default function Home() {
             iconHeight={24}
             title='GitHub'
             yOffset={1}
+            center={true}
           />
         </div>
 
@@ -60,27 +62,22 @@ export default function Home() {
           />
 
           <Item
-            url='http://everybodysjimapp.herokuapp.com/'
+            url='http://everybodysjimapp.herokuapp.com'
             icon='/bat.png'
-            iconWidth={26}
-            title="Castlevania Remake"
-            description='A web app implementation of an original multiplayer role-playing game'
-            yOffset={3}
+            iconWidth={28}
+            title={"Castlevania Remake"}
+            description='A PC remake of the original Castlevania for the NES'
+            yOffset={1}
           />
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`${inter.className} ${styles.inner}`}>
-              Templates
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+          <Item
+            url='https://github.com/DvirArazi/advent_of_code'
+            icon='aoc.svg'
+            iconWidth={24}
+            title={"Advent of Code"}
+            description='Solutions for the puzzles of the yearly Advent of Code event'
+            yOffset={4}
+          />
         </div>
       </main>
     </>
