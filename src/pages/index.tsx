@@ -23,15 +23,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.grid}>
+        {/* <div style={{maxWidth: `550px`}}> */}
+        <div className={styles.grid2} style={{background: ``}}>
           <Item
             url='https://drive.google.com/file/d/1zOSgtPg2RsRdeDXJ27eF-8dGeU36SCTx/view?usp=sharing'
             icon='person_black_24dp.svg'
             iconWidth={30}
             title='Resume'
-            center={true}
+            // center={true}
+            // paddingSide={40}
           />
-
+          {/* <div style={{width: `30px`}}/> */}
           <Item
             url='https://github.com/DvirArazi'
             icon='github-mark.svg'
@@ -39,9 +41,11 @@ export default function Home() {
             iconHeight={24}
             title='GitHub'
             yOffset={1}
-            center={true}
+            // center={true}
+            // paddingSide={40}
           />
         </div>
+        {/* </div> */}
 
         <div className={styles.grid}>
           <Item

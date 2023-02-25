@@ -10,12 +10,22 @@ export default function Item(props: {
   iconWidth: number,
   iconHeight?: number,
   title: string,
-  title2?: string,
   description?: string,
   yOffset?: number,
   center?: boolean,
+  paddingSide?: number,
 }) {
-  const { url, icon, title, title2, description, yOffset, iconWidth, iconHeight, center } = props;
+  const {
+    url,
+    icon,
+    title, 
+    description,
+    yOffset,
+    iconWidth,
+    iconHeight,
+    center,
+    paddingSide,
+  } = props;
 
   return <a
     href={url}
@@ -23,7 +33,11 @@ export default function Item(props: {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <h2 className={inter.className} style={{display: `flex`, justifyContent: center ? `center`: ``}}>
+    <h2 className={inter.className} style={{
+      display: `flex`,
+      justifyContent: center ? `center`: ``,
+      padding: `0 ${paddingSide}px`,
+    }}>
       <span style={{display: `inline-block`, transform: `translateY(${yOffset}px)` }}>
         <Image src={icon} width={iconWidth} height={iconHeight ?? iconWidth} alt={''} className={styles.imager} />
       </span>
