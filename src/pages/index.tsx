@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Item from '@/components/Item'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,78 +16,57 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        <div>
+          <div className={`${styles.center} ${styles.name}`}>
+            DvirDEV
           </div>
         </div>
 
         <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+          <Item
+            url='https://drive.google.com/file/d/1zOSgtPg2RsRdeDXJ27eF-8dGeU36SCTx/view?usp=sharing'
+            icon='person_black_24dp.svg'
+            iconWidth={30}
+            title='Resume'
+          />
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+          <Item
+            url='https://github.com/DvirArazi'
+            icon='github-mark.svg'
+            iconWidth={25}
+            iconHeight={24}
+            title='GitHub'
+            yOffset={1}
+          />
+        </div>
+
+        <div className={styles.grid}>
+          <Item
+            url='https://neo-chess.herokuapp.com/'
+            icon='neo-chess.svg'
+            iconWidth={25}
+            title='Neo-Chess'
+            description='A web app for playing an original chess variant online and over the board'
+          />
+
+          <Item
+            url='http://everybodysjimapp.herokuapp.com/'
+            icon='everybodys-jim.svg'
+            iconWidth={22}
+            title="Everybody's Jim"
+            description='A web app implementation of an original multiplayer role-playing game'
+            yOffset={3}
+          />
+
+          <Item
+            url='http://everybodysjimapp.herokuapp.com/'
+            icon='/bat.png'
+            iconWidth={26}
+            title="Castlevania Remake"
+            description='A web app implementation of an original multiplayer role-playing game'
+            yOffset={3}
+          />
 
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -94,26 +74,11 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
+            <h2 className={`${inter.className} ${styles.inner}`}>
+              Templates
             </h2>
             <p className={inter.className}>
               Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
             </p>
           </a>
         </div>
